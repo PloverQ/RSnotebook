@@ -1,0 +1,28 @@
+---
+title: "Getting started with remote sensing"
+author: "yaqi cui"
+execute:
+  engine: knitr
+---
+
+## **Summary**
+
+This week’s lecture introduced the fundamentals of remote sensing and the basic types of satellite sensors and resolutions. It helped me understand the distinction between active and passive sensing, particularly how passive sensors like Landsat-8 and Sentinel-2 rely on sunlight, while active sensors (e.g., SAR) can operate in any condition. The idea of electromagnetic radiation and spectral signatures was familiar from my undergraduate remote sensing course, but it was helpful to revisit how different surfaces reflect differently across the spectrum, especially in the context of land cover identification. I also learned the importance of spatial, spectral, radiometric, and temporal resolutions in selecting appropriate imagery.
+
+In the practical session, we used SNAP and RStudio to explore Sentinel-2 and Landsat-8 images over Kanagawa, Japan. We have introduced various tools and platforms used in Earth observation (EO) data analysis, including EO Browser, QGIS with plugins, R, and SNAP. Each tool was used to calculate and visualise NDVI (Normalized Difference Vegetation Index), highlighting their respective strengths and limitations. I found it interesting that all tools could achieve a similar output (NDVI), but the user experience, automation potential, and complexity varied greatly. For example, EO Browser offers fast and user-friendly cloud-based processing, while SNAP provides more in-depth control at the cost of a steeper learning curve.
+
+Although I have some prior experience with remote sensing using ENVI and ArcGIS, this week still felt new, especially when using SNAP. The practicals helped reinforce the idea that tools are not ends in themselves—they’re means to generate reliable insight, and choosing one depends on the context, technical comfort, and desired outputs.
+
+### **Applications**
+
+Different EO tools present trade-offs between usability, flexibility, and analytical power. SNAP, developed by the European Space Agency, is designed specifically for Sentinel data and supports advanced pre-processing tasks such as atmospheric correction and band math (Veci, 2016) \[[here](https://sentinel.esa.int/web/sentinel/toolboxes/sentinel-1)\] . This makes it ideal for scientific applications requiring fine control over image calibration.
+
+By contrast, R offers a reproducible coding environment through packages like raster which enables users to automate NDVI calculation and integrate it into broader workflows. Its script-based approach also enhances transparency and repeatability, making it valuable in academic research.
+
+QGIS, while less technical than SNAP or R, allows fast visualisation and integration of multiple spatial layers via its semi-graphical interface. Plugins such as Semi-Automatic Classification Plugin (SCP) make NDVI computation more accessible. Ultimately, the tool chosen depends on the balance between ease of use and analytical depth required for the task.
+
+### **Reflection**
+
+This week challenged me to move beyond tools I was comfortable with, such as ArcGIS or QGIS, and explore SNAP—a tool that felt more opaque and technical. Although I struggled at first, I came to appreciate how SNAP allows deeper manipulation of Sentinel data. Still, it reminded me that steep learning curves could limit accessibility, especially outside academic contexts.
+
+It also made me reflect on how important reproducibility is in remote sensing. R’s scripting environment, while initially complex, might be more useful long-term in collaborative or policy-related projects where sharing workflows is necessary. In future work, I aim to better match tools to tasks—choosing for scalability, not just familiarity.

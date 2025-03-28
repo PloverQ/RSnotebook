@@ -1,0 +1,24 @@
+---
+title: "Corrections"
+author: "yaqi cui"
+execute:
+  engine: knitr
+---
+
+## **Summary**
+
+This week explored various image correction techniques in remote sensing, including atmospheric correction, topographic correction, and especially **Principal Component Analysis (PCA)**. While I was already familiar with most basic correction methods from my undergraduate experience with ENVI and ArcGIS, PCA stood out as something I had heard of but never applied. I found PCA particularly interesting because it transforms correlated multispectral bands into a new set of uncorrelated principal components, allowing for more efficient dimensionality reduction.
+
+The main idea is to capture the most meaningful variance in the data and reduce redundancy—this is especially helpful in change detection or classification tasks. During the practicals, we implemented PCA in R using the raster package and visualized the transformed bands. What intrigued me most was how the first few principal components often captured almost all the variability in the dataset, making it easier to extract patterns that might not be visible in original bands.
+
+## **Applications**
+
+A key application of PCA in remote sensing is land use/land cover change detection. Rather than comparing raw spectral bands, PCA transforms multispectral data into uncorrelated principal components, allowing more meaningful patterns to emerge. For instance, a study by Deng et al. (2008) \[[here](https://doi.org/10.1080/01431160801950162)\] demonstrated that PCA enhanced land-use change detection using multisensor satellite imagery by reducing spectral confusion between classes. A critical issue with PCA, however, is that while it emphasizes major variation, it may suppress minor—but meaningful—changes, which can affect the sensitivity of change detection tasks.
+
+PCA is also widely used for dimensionality reduction in hyperspectral remote sensing. A 2021 study by Uddin et al. \[[her](https://doi.org/10.1080/02564602.2020.1740615)[e](https://andrewmaclachlan.github.io/CASA0023/.)\] applied PCA as a preprocessing method to reduce noise and redundant information before hyperspectral image classification. The authors found that PCA improved classification accuracy by streamlining input data and reducing confusion in high-dimensional feature space. This highlights how PCA supports cleaner model training and faster computation—though it's important to note that alternative methods like Minimum Noise Fraction (MNF) may outperform PCA under certain conditions. Ultimately, PCA remains a valuable tool for simplifying complex datasets and enhancing the robustness of remote sensing classification tasks.
+
+## **Reflection**
+
+Although I had experience with image correction workflows, I hadn’t considered how PCA could reveal hidden structures in multispectral data. After experimenting with it in R this week, I now see its potential for improving my own research. For example, in future urban expansion studies, PCA could help highlight subtle changes in land use across time without relying on pixel-by-pixel comparison.
+
+However, I also realized that while PCA is powerful, it requires interpretation skills—principal components don’t always have intuitive meaning, and choosing how many to retain can be subjective. In policy contexts or collaborative work, that subjectivity might complicate how results are communicated. That said, PCA is a tool I now see as complementary: useful when combined with classification algorithms or when simplifying datasets for broader analysis. I look forward to exploring hybrid workflows in which PCA and supervised classification are used together to increase efficiency and clarity.

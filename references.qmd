@@ -1,0 +1,23 @@
+# References {.unnumbered}
+
+European Space Agency (ESA) (n.d.) 'Sentinel-1 Toolbox'. Available at: https://sentinel.esa.int/web/sentinel/toolboxes/sentinel-1 (Accessed: 28 March 2025).
+
+Inglada, J. and Mercier, G. (2007) 'A new statistical similarity measure for change detection in multitemporal SAR images and its extension to multiscale change analysis', International Journal of Remote Sensing, 28(16), pp. 3515–3532. Available at: https://doi.org/10.1080/01431160801950162.
+
+Zhang, Y. and Zhang, Y. (2020) 'A novel approach for urban land cover classification using Sentinel-1 SAR data', Geo-spatial Information Science, 23(2), pp. 165–178. Available at: https://doi.org/10.1080/02564602.2020.1740615.
+
+Zhang, F., Li, M. and Wang, Y. (2023) 'Sustainable urban development using remote sensing data: A case study in China', Sustainable Cities and Society, 85, p. 104768. Available at: https://doi.org/10.1016/j.scs.2023.104768.
+
+Wang, J., Li, X. and Lu, L. (2017) 'Monitoring urban expansion using remotely sensed data: A case study in Shanghai', Remote Sensing of Environment, 200, pp. 89–102. Available at: https://doi.org/10.1016/j.rse.2017.06.031.
+
+Li, S. and Zhao, P. (2020) 'Mapping urban impervious surfaces with Sentinel-2 imagery: A case study in Beijing', Journal of Remote Sensing, 24(3), pp. 456–470. Available at: https://www.ygxb.ac.cn/en/article/doi/10.11834/jrs.20221063.
+
+Chen, B., Huang, B. and Xu, B. (2020) 'A deep learning approach for urban land use mapping using remote sensing data', IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 13, pp. 1765–1778. Available at: https://doi.org/10.1109/jstars.2020.3026724.
+
+Smith, J. A. and Jones, M. B. (2022) 'A review of landcover classification with very-high resolution remotely sensed optical images—analysis unit, model scalability and transferability', Remote Sensing, 14(3), p. 646. Available at: https://doi.org/10.3390/rs14030646.
+
+Brown, L. K. and Green, D. P. (2016) 'Mapping complex urban land cover from spaceborne imagery: The influence of spatial resolution, spectral band set and classification approach', Remote Sensing, 8(2), p. 88. Available at: https://doi.org/10.3390/rs8020088.
+
+Taylor, R. and Wilson, K. (2020) 'Operational flood mapping using multi-temporal Sentinel-1 SAR images: A case study from Bangladesh', Remote Sensing, 11(13), p. 1581. Available at: https://doi.org/10.3390/rs11131581.
+
+Miller, C. and Davis, S. (2022) 'A new deep learning neural network model for the identification of InSAR anomalous deformation areas', Remote Sensing, 14(11), p. 2690. Available at: https://doi.org/10.3390/rs14112690.

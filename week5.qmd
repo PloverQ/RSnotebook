@@ -1,0 +1,36 @@
+---
+title: "Policy case"
+author: "yaqi cui"
+execute:
+  engine: knitr
+---
+
+*(updated after the GEE week)*
+
+## **Summary**
+
+This week’s theme on remote sensing and policy encouraged me to reflect on a small research project I completed during my undergraduate studies, which focused on the **cooling effects of blue-green infrastructure (BGI)** in central **Guangzhou**, a rapidly urbanising megacity in southern China. My study analysed how **landscape structure—measured through spatial metrics like shape, connectivity, and dispersion—affected land surface temperature (LST)** in different seasons. Using Landsat imagery and Fragstats, I found that more connected and evenly distributed green-blue spaces provided stronger localised cooling, especially in summer.
+
+Guangzhou’s policy environment is increasingly supportive of ecosystem-based urban planning. Aligned with China’s national "Ecological Civilisation" vision, the city has launched initiatives like the **"Ecological Green Heart"** and adopted zoning frameworks such as **"Three Lines and One Permit"**, which aim to integrate ecological protection into urban development. These strategies focus not only on increasing green coverage but also on optimising its spatial layout for **climate resilience**.
+
+At the time, my project primarily served as an academic exercise. But through this week’s lens, I now see how such remote sensing-based evaluations could directly support **urban climate governance**—for instance, by **tracking progress toward cooling targets**, evaluating green infrastructure effectiveness, or informing urban greening strategies under heat adaptation policies. This shift in framing—from a technical analysis to a policy-relevant tool—represents my main takeaway this week.
+
+## **Application**
+
+My undergraduate thesis explored the cooling effects of blue-green spaces in Guangzhou’s urban core, primarily using **Landsat imagery, ENVI for LST extraction, and Fragstats for landscape metrics**. At the time, I relied heavily on traditional desktop software and processed the data locally, which was computationally slow and fragmented. While the study effectively demonstrated how spatial arrangement and landscape structure influence the cooling effect, it lacked temporal depth and real-time adaptability.
+
+This week’s learning and the paper by Gobatti et al. (2023) \[[here](https://doi.org/10.1016/j.scs.2023.104768)\] significantly expanded my perspective. Their study applied **Google Earth Engine (GEE)** to monitor **Cooling Establishment Time (CET)** of different Blue-Green Infrastructures (BGI) in Zurich over nearly 40 years, combining **LST and NDVI data from Landsat 5 and 8**. This approach was particularly insightful in two ways:
+
+-   **Cloud computing made temporal analysis feasible**: GEE enabled continuous tracking of vegetation development and LST changes, highlighting how quickly various types of BGI reach stable cooling performance. In contrast, my own study was limited to a single year’s data due to processing constraints.
+
+-   **Policy relevance**: The concept of CET provides practical implications for green infrastructure planning. For example, areas in urgent need of cooling may benefit more from BGIs with shorter CETs (e.g., grasslands) rather than trees, which take longer to mature.
+
+If I were to revisit my Guangzhou case using GEE, I could incorporate a **multi-year CET analysis**, identify **optimal green configurations** based on establishment time and cooling strength, and even **scale up** the study to include other districts. This would make the research far more **actionable** for planners and decision-makers under heat stress conditions.
+
+## Reflection
+
+I used to think remote sensing analysis was mainly about extracting one-time LST or NDVI values and comparing them spatially. This week taught me that **temporal dynamics and policy alignment** are just as important. I was particularly struck by how Gobatti et al. used reference pixels and ΔLST calculations to **filter out urban warming trends**, allowing clearer insights into the true effect of BGI. This is something I had never considered in my previous work, and it revealed to me a weakness in my earlier assumption that all changes in LST could be attributed directly to vegetation structure alone.
+
+Another realization came from their focus on **design and maintenance factors**, like irrigation systems and vegetation type, which significantly affected CET. I had previously assumed that once the green infrastructure is "there", its effect is immediate. This week made me more cautious about **delayed cooling performance**, and the need to adjust expectations when evaluating policy outcomes.
+
+Looking forward, I see GEE not just as a better tool, but also as a way to **democratize environmental monitoring**—especially for cities with limited technical capacity. This learning has deepened my understanding of how Earth observation can go beyond academic insights and actually shape **climate resilience strategies**.

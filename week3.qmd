@@ -1,0 +1,14 @@
+---
+title: "xaringan"
+author: "yaqi cui"
+execute:
+  engine: knitr
+---
+
+## Xaringan about Landsat 8 OLI
+
+This week I learned to use xaringan which I think is similar with a power point:
+
+```{r}
+xaringanExtra::embed_xaringan(url = "https://ploverq.github.io/xiaringan/")
+```

@@ -1,0 +1,13 @@
+---
+title: "Welcome"
+author: "yaqi cui"
+date: "January 28, 2025"
+format:
+  html:
+    toc: true    
+    toc-depth: 2 
+---
+
+# RS Learning Diary
+
+Hi to the reader! I'm **Yaqi Cui**, who have had some basic experience with remote sensing during her undergraduate studies, mainly using ENVI and ArcGIS, but tools like SNAP and Google Earth Engine were new to her before this course. My learning diary captures what I’ve learned in ***CASA0023: Remote Sensing Cities and Environment***(You can find the origin lectures \[[here](https://andrewmaclachlan.github.io/CASA0023/.)\] from our teacher Dr. Andrew Maclachlan and Dr. Ollie Ballinger), including weekly summaries, examples from literature, and personal reflections. I’ve chosen a mainly text-based format to focus on clarity and depth, rather than including visuals—something I felt helped keep the content consistent and reflective. Through this module, I hope to expand my ability to select and combine appropriate tools for remote sensing analysis, develop reproducible workflows, and better understand how EO data can be used in urban and environmental studies.

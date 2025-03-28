@@ -1,0 +1,22 @@
+---
+title: "Getting started with GEE"
+author: "yaqi cui"
+execute:
+  engine: knitr
+---
+
+## **Summary**
+
+This week introduced Google Earth Engine (GEE), a cloud-based platform that allows users to process and analyze massive amounts of geospatial data directly in the browser. We learned about GEE’s JavaScript-based code editor, its planetary-scale datasets (e.g. Landsat, Sentinel), and tools for time-series visualization and supervised classification. GEE differs from traditional tools like QGIS or ArcGIS by eliminating the need to download data and enabling real-time analysis of satellite imagery using scalable cloud resources.
+
+During the practical, I followed the workflow of importing Landsat data, applying cloud masking, and creating a simple NDVI composite to monitor vegetation. I also explored how classifiers (like CART) can be trained in GEE to produce land cover maps. Compared to local processing tools I’ve used before, the speed and interactivity of GEE were impressive. I was especially struck by its ability to analyze long-term data (e.g., 30+ years of Landsat) within seconds. However, I also found the scripting-based approach a bit overwhelming at first, particularly without strong JavaScript skills. Still, this experience gave me a much better sense of what makes GEE so powerful.
+
+### **Applications**
+
+A major benefit of GEE is its capacity to support long-term, large-scale environmental monitoring. For instance, Gorelick et al. (2017)\[[here](https://doi.org/10.1016/j.rse.2017.06.031)\] demonstrate how GEE enables researchers to access and process petabytes of remote sensing data with minimal technical barriers. This has opened up new possibilities in land change analysis, water resource monitoring, and deforestation tracking—tasks that used to require substantial infrastructure and programming expertise. GEE’s key advantage is its ability to combine computation, storage, and data into one seamless platform. This lowers the threshold for participation and fosters more inclusive environmental science.
+
+GEE is also valuable in flood monitoring and multisource integration. A 2023 study by Liu et al.\[[here](https://www.ygxb.ac.cn/en/article/doi/10.11834/jrs.20221063)\] used GEE to assess flood dynamics in Fuyang, China, by combining Sentinel-1 radar, Sentinel-2 optical, Landsat 8 imagery, and night-time light data (NPP-VIIRS DNB). A key issue they addressed was how to integrate and cross-validate different data types—particularly the relationship between water body extent and light intensity during flooding. GEE’s cloud-based framework enabled rapid extraction of flooded areas and supported temporal analysis that aligned well with known flood diversion events. This study demonstrated that GEE is not only capable of processing diverse datasets simultaneously, but also supports novel indices like CNLI (Compounded Night Light Index) that enhance disaster evaluation.
+
+### **Reflection**
+
+Despite having some remote sensing background, GEE was new territory for me. I had heard about it being used in large-scale studies but hadn’t realized how widespread and practical it had become. The way it streamlines access to historical imagery and simplifies analysis workflows is transformative. However, its scripting interface can be a barrier for those unfamiliar with JavaScript, which could limit accessibility outside technical teams. Going forward, I’d like to improve my scripting skills to use GEE more effectively—especially for urban change detection or environmental policy evaluation. I can see it becoming a core tool for spatial research, especially when combined with open-source tools like R or QGIS for post-processing.

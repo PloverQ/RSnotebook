@@ -1,0 +1,24 @@
+---
+title: "Classification I"
+author: "yaqi cui"
+execute:
+  engine: knitr
+---
+
+## **Summary**
+
+This week focused on classification methods in remote sensing, covering both supervised and unsupervised approaches.
+
+In supervised classification, algorithms like Maximum Likelihood Classification (MLC), Support Vector Machines (SVM), and Random Forest (RF) use labeled training data to predict land cover classes. I found it fascinating how SVM seeks to find an optimal decision boundary, while RF uses an ensemble of decision trees to improve robustness.
+
+Unsupervised classification, including K-Means and ISODATA, was also introduced. These methods cluster pixels based on their spectral properties without requiring training labels. I practiced both in R, using caret for model tuning and validation. What stood out to me was the challenge of “mixed pixels”—single pixels that contain multiple land cover types—often leading to misclassification. This is especially relevant in urban or transitional zones where boundaries between land cover classes are not well-defined.
+
+### **Applications**
+
+A key issue with supervised classification is **how different algorithms scale across datasets and tasks**, especially when training data is limited or landscape complexity increases. A comprehensive meta-analysis of 251 studies comparing Support Vector Machines (SVM) and Random Forest (RF) found that while both perform well across remote sensing applications, their effectiveness depends heavily on factors like spatial resolution, data type, and number of input features (Sheykhmousa, 2020) \[[here](https://doi.org/10.1109/JSTARS.2020.3026724)\]. For example, RF tends to outperform SVM in high-dimensional feature spaces due to its robustness to overfitting, while SVM can be more precise when the dataset is small and well-structured. This highlights that classification accuracy is not just a function of the model architecture, but of its compatibility with specific data characteristics and study goals.
+
+Another important consideration is **scalability and transferability**, particularly when using very-high-resolution (VHR) imagery. Qin (2022) \[[here](https://doi.org/10.3390/rs14030646)\] points out that many classification pipelines focus too narrowly on model performance without addressing challenges like data sparsity, domain shift, and multi-source fusion. These issues become more critical as deep learning methods are increasingly applied to complex, large-scale land cover tasks. The study emphasizes that classification strategies should consider not just the learning algorithm but also the unit of analysis (e.g., pixel vs. object), data imbalance, and region-specific variability. This supports the idea that model choice and training strategies must adapt to spatial context, and that accuracy metrics alone do not guarantee meaningful or generalizable results.
+
+### **Reflection**
+
+This week made me more cautious about overvaluing classification accuracy as the ultimate goal. While tuning models and using platforms like GEE or scikit-learn is tempting due to their efficiency, it’s easy to overlook the assumptions behind each algorithm and the limitations of the data. A model might score well on accuracy but still fail to produce reliable, interpretable insights across regions or time periods. I now believe that model choice should be driven by research questions, data characteristics, and spatial scale. In future projects, I want to move beyond accuracy scores and focus more on the relevance and robustness of classification outputs, especially in policy-relevant or dynamic environments.

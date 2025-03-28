@@ -1,0 +1,26 @@
+---
+title: "SAR"
+author: "yaqi cui"
+execute:
+  engine: knitr
+---
+
+## **Summary**
+
+This final week introduced Synthetic Aperture Radar (SAR), a powerful active remote sensing technique that emits and receives its own microwave signals, making it independent of sunlight or weather. A SAR signal contains both amplitude (backscatter) and phase, which can be used for change detection and elevation mapping (e.g., via InSAR and DInSAR).
+
+One key learning this week was understanding polarization—for example, HH means the radar was both emitted and received in horizontal polarization, while VH means vertical emission and horizontal reception. Different scattering types, such as rough surface, volume, and double bounce, correspond to specific surface interactions and polarizations (e.g., water responds strongly to VV, forests to VH or HV, and urban corners to HH).
+
+SAR data is commonly expressed in power, amplitude, or dB. In GEE, dB values are the default and most useful for visualizing contrast. For change detection, we explored ratio methods (e.g., log-ratio, improved ratio), as subtracting SAR images directly is not reliable due to speckle noise. We also learned about combining SAR and optical data via PCA, OBIA, and intensity fusion, which improves robustness in multi-temporal analysis.
+
+SAR’s independence from cloud cover and lighting conditions makes it ideal for disaster monitoring (floods, landslides), infrastructure monitoring, and long-term land surface change analysis. Its major strength is in capturing both surface texture and small displacements over time.
+
+## **Application**
+
+A key challenge in disaster monitoring is the rapid identification of flood-affected areas, especially under cloud cover. One study addressed this by using multi-temporal Sentinel-1 SAR imagery to map monsoon floods in Bangladesh (Uddin et al., 2019)\[[here](https://doi.org/10.3390/rs11131581)\]. Since SAR operates independently of weather or daylight, images were acquired within hours of flood events, enabling emergency response teams to act quickly. The researchers utilized backscatter intensity changes and histogram thresholding techniques to distinguish between inundated and dry areas. This highlights how SAR’s cloud-penetrating ability and temporal flexibility are essential for operational mapping in vulnerable regions, especially where optical imagery is often obstructed.
+
+Beyond flood monitoring, SAR’s value lies in detecting slow or abnormal ground deformation. Zhang et al. (2022)\[[here](https://doi.org/10.3390/rs14112690)\] proposed a deep learning model called InSARNET that leverages SBAS-InSAR data to identify anomalous deformation areas. Applied in Maoxian County, the model outperformed traditional approaches by recognizing complex spatial-temporal deformation patterns, reducing false alarms, and isolating high-risk landslide zones. This integration of SAR and AI represents a key advancement—combining the observational power of InSAR with neural networks’ ability to learn from large, noisy datasets. It opens new doors for long-term hazard prediction and automated deformation analysis in mountainous or urban environments.
+
+## Reflection
+
+This week’s content on SAR felt both exciting and overwhelming. Compared to optical imagery, SAR is fundamentally different—not only in how data is captured, but also in how it must be processed and interpreted. At first, I wasn’t sure whether the classification and analysis methods we learned in previous weeks still applied here. After doing some research, I found that although classification techniques can be used on SAR data, challenges like speckle noise and phase ambiguity often reduce accuracy. Still, SAR’s strengths—such as its high revisit frequency and ability to operate in all weather conditions—make it invaluable for applications like disaster monitoring and ground deformation tracking. What I take away from this week is that while some techniques are shared across remote sensing data types, SAR requires a specialized workflow with methods like despeckling, coherence analysis, and interferometry. The learning curve is steeper, but the potential is immense—especially if multi-polarisation data can help us understand surface scattering more deeply.

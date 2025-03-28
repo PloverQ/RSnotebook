@@ -1,0 +1,24 @@
+---
+title: "Classification II"
+author: "yaqi cui"
+execute:
+  engine: knitr
+---
+
+## **Summary**
+
+This week extended our understanding of classification by introducing **Object-Based Image Analysis (OBIA)**, **Sub-pixel classification**, and **Accuracy Assessment**. OBIA was particularly interesting because it shifts focus from individual pixels to meaningful objects, grouping them by R packages like Supercells, SegOptim, and MESMA, spectral similarity (homogeneity) or difference (heterogeneity). This method is supported by which allow object segmentation prior to classification.
+
+Sub-pixel classification was another new concept for me—it deals with the fractional composition of a pixel, estimating how much of it belongs to different land cover types. This is especially useful in areas with mixed land use or coarse resolution imagery.
+
+Finally, the lecture emphasized accuracy metrics: **User's Accuracy**, **Producer's Accuracy**, and **Overall Accuracy**, along with the confusion matrix. I learned that while overall accuracy gives a quick snapshot of model performance, user’s and producer’s accuracy provide more specific insights into commission and omission errors—crucial when certain land cover types (e.g. urban vs. forest) are more sensitive in policy or ecological terms.
+
+## **Application**
+
+A key issue in remote sensing classification is how to effectively map complex urban land cover with high detail and reliability. One study compared OBIA with SVM and MLC for mapping urban environments using different spatial resolutions and spectral combinations. The findings showed that OBIA, when applied to 2-meter, 8-band WorldView-2 imagery, significantly outperformed traditional classifiers, achieving an overall accuracy of 91% (Momeni, 2016) \[[here](https://doi.org/10.3390/rs8020088)\] . The results suggest that OBIA’s strength lies in its ability to preserve object boundaries and reduce “salt and pepper” noise common in pixel-based methods. More importantly, the study found that spatial resolution was the most influential factor in improving accuracy, but the synergy of advanced spectral bands and OBIA approaches led to the most consistent performance gains in complex urban settings.
+
+Beyond the classifier itself, the choice of OBIA software and accuracy evaluation strategy also plays a critical role. Lourenço et al. (2021)\[[here](https://doi.org/10.1016/j.jag.2020.102263)\] compared three OBIA software platforms for mapping invasive alien plants (IAP) along roads using VHR imagery. While all platforms used similar segmentation algorithms, their performance in accuracy assessment varied widely. For instance, eCognition, when using Multiresolution Segmentation (MRS) and Nearest Neighbour Classifier, achieved up to 95.7% accuracy for land cover and 92.8% for IAP classes, outperforming open-source and ArcGIS implementations. This study illustrates that OBIA is not just a method but a full pipeline—where segmentation algorithms, classifiers, and software environments collectively shape classification quality. It also reinforces the need for class-specific accuracy reporting beyond overall metrics, especially when dealing with heterogeneous or rare land cover types.
+
+## Reflection
+
+This week was conceptually dense, especially with the introduction of OBIA and sub-pixel classification. Initially, I found the transition from pixel-based to object-based thinking slightly confusing, but the idea of grouping pixels into meaningful shapes actually makes a lot of sense—especially in heterogeneous environments. I also realized that relying only on overall accuracy can be misleading. In my future work, I would prefer to report class-specific accuracy metrics and visualize confusion matrices, especially when dealing with high-stakes applications like urban planning or deforestation monitoring. OBIA seems promising and I am interested in trying out tools like Supercells and eCognition, though I’m also aware of the trade-offs in complexity and computation.
